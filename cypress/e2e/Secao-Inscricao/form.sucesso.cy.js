@@ -1,15 +1,15 @@
 describe("Preenchimento do formulário de inscrição", () => {
   beforeEach(() => {
-    cy.visit("https://qualidade.apprbs.com.br/certificacao");
-  });
-
-  it("Deve preencher o formulário com nome válido", () => {
-    // Ignora o erro específico da aplicação
+     // Ignora o erro específico da aplicação
     cy.on("uncaught:exception", (err) => {
       if (err.message.includes("ActionsForm")) {
         return false;
       }
     });
+    cy.visit("https://qualidade.apprbs.com.br/certificacao");
+  });
+
+  it("Deve preencher o formulário com nome válido", () => {
 
     // Preenche o campo Nome
     cy.get('input[name="pessoa.nome"]').should("be.visible").type("Carol");
