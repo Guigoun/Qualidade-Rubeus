@@ -13,7 +13,7 @@ describe("Botões 'Quero me certificar'", () => {
   });
 
   it("Deve validar o redirecionamento para página da rubeus", () => {
-    //Clica no botão e permite ficar na mesma aba
+    //Valida se o botão é visível, clica e permite ficar na mesma aba
     cy.get("#ivw5ng")
       .invoke("removeAttr", "target")
       .should("be.visible")
@@ -26,7 +26,8 @@ describe("Botões 'Quero me certificar'", () => {
     //Acessa o site novamente - Evita que fique preso na tela branca do domínio externo
     //A automação está sofrendo conflito de domínio
     cy.visit("https://qualidade.apprbs.com.br/certificacao");
-    // Busca pelo link que contém o texto e o destino correto
+
+    //Valida se o botão é visível, clica e permite ficar na mesma aba
     cy.get("#i72bga")
       .invoke("removeAttr", "target")
       .should("be.visible")
