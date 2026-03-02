@@ -9,7 +9,6 @@ describe('Botão Quero me certificar', () => {
         }
       })
 
-
     //Acessa o site a ser testado
     cy.visit('https://qualidade.apprbs.com.br/certificacao')
 })
@@ -17,11 +16,10 @@ describe('Botão Quero me certificar', () => {
   it('Deve redirecionar para a página da rubeus', () => {
 
     //Clica no botão e permite ficar na mesma aba
-    cy.get('#ivw5ng').invoke('removeAttr', 'target').click()
+    cy.get('#i72bga').invoke('removeAttr', 'target').click()
 
     //valida que realmente mudou de domínio
     cy.origin('https://rubeus.com.br', () => {
-
       cy.location('hostname').should('eq', 'rubeus.com.br')
     })
 })
