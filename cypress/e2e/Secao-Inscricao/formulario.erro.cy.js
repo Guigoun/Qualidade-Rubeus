@@ -11,7 +11,7 @@ describe("Preenchimento do formulário de inscrição", () => {
       }
     });
 
-    // Preenche os campos nome, telefone e e-mail
+    //Valida se os campos nome, telefone e e-mail estão visíveis,habilitados e os preenche com dados inválidos
     cy.get('input[name="pessoa.nome"]')
       .should("be.visible")
       .type("FHODIF~323RF-2-934293FWEDJ");
