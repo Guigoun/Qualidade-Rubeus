@@ -2,6 +2,7 @@
 Este projeto consiste em uma suíte de testes ponta a ponta (E2E) utilizando Cypress para validar a funcionalidade e a experiência do usuário no site de certificação.
 
 🛠️ Tecnologias e Dependências
+
 Cypress: Framework principal de automação.
 
 Mochawesome: Utilizado para gerar relatórios detalhados em HTML e JSON.
