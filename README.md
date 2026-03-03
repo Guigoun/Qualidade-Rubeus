@@ -9,16 +9,11 @@ Mochawesome: Utilizado para gerar relatórios detalhados em HTML e JSON.
 Evidências: Configurado para gravação automática de Vídeos de cada execução.
 
 📦 Instalação
-1. Clone o repositório:
+1. Clone o repositório: git clone https://github.com/Guigoun/Qualidade-Rubeus.git
 
-git clone https://github.com/Guigoun/Qualidade-Rubeus.git
+2. Instale as Dependências do Projeto: npm install
 
-2. Instale as Dependências do Projeto:
-npm install
-
-3. Instale as dependências do Relatório (Mochawesome):
-
-npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+3. Instale as dependências do Relatório (Mochawesome): npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
 
 🖥️ Guia de Configuração da Interface (Passo a Passo)
 Para quem for rodar a automação pela primeira vez na máquina, siga estas instruções visuais:
