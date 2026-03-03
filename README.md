@@ -35,8 +35,8 @@ O Cypress mostrará os arquivos de configuração criados. Clique em Continue.
 Escolha o navegador de sua preferência (ex: Chrome) e clique em Start E2E Testing.
 ![alt text](images/passo3.png)
 
-4. Criar ou Acessar Specs
-Se desejar criar um novo teste do zero, selecione Create new spec.
+4. Criar Spec
+Selecione Create new spec.
 ![alt text](images/passo4.png)
 
 5. Definir o Caminho do Teste
