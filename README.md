@@ -11,9 +11,13 @@ Evidências: Configurado para gravação automática de Vídeos de cada execuç�
 📦 Instalação
 1. Clone o repositório: git clone https://github.com/Guigoun/Qualidade-Rubeus.git
 
-2. Instale as Dependências do Projeto: npm install
+2. Inicie o projeto Node (gera o package.json básico): npm init -y
 
-3. Instale as dependências do Relatório (Mochawesome): npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+3. Instale as Dependências do Projeto: npm install
+
+4. Instale o Cypress: npm install cypress --save-dev
+
+4. Instale as dependências do Relatório (Mochawesome): npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
 
 🖥️ Guia de Configuração da Interface (Passo a Passo)
 Para quem for rodar a automação pela primeira vez na máquina, siga estas instruções visuais:
