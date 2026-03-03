@@ -23,11 +23,12 @@ describe("Ícones das redes sociais", () => {
 
   it("Deve validar o redirecionamento para o linkedin", () => {
     //Valida se o ícone está visível e clicável
+    cy.visit("https://qualidade.apprbs.com.br/certificacao");
     cy.get("#i2m2tn")
       .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://www.linkedin.com/company/rubeus/")
-      .click({ force:false });
+      .click({ force:true });
   });
 
 });
