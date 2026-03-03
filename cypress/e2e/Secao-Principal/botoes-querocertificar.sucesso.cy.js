@@ -27,8 +27,7 @@ describe("Botões 'Quero me certificar'", () => {
     //A automação está sofrendo conflito de domínio
     cy.visit("https://qualidade.apprbs.com.br/certificacao");
 
-    //Valida se o botão é visível, clica e permite ficar na mesma aba
-    cy.get("#i72bga")
+      cy.get("#i72bga")
       .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://rubeus.com.br/")
