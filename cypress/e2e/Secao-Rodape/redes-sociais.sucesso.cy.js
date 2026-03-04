@@ -4,31 +4,27 @@ describe("Ícones das redes sociais", () => {
   });
 
   it("Deve validar o redirecionamento para o facebook", () => {
-    //Valida se o ícone está visível e clicável
+    //Valida os atributos do link e se está visível
     cy.get("#io0o4o")
-      .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://www.facebook.com/CanalRubeus")
-      .click({ force:false });
+      .and("have.attr", "target", "_blank")
   });
 
   it("Deve validar o redirecionamento para o instagram", () => {
-    //Valida se o ícone está visível e clicável
+    //Valida os atributos do link e se está visível
     cy.get("#il7i3x")
-      .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://www.instagram.com/canalrubeus/")
-      .click({ force:false });
+      .and("have.attr", "target", "_blank")
   });
 
   it("Deve validar o redirecionamento para o linkedin", () => {
-    //Valida se o ícone está visível e clicável
-    cy.visit("https://qualidade.apprbs.com.br/certificacao");
+    //Valida os atributos do link e se está visível
     cy.get("#i2m2tn")
-      .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://www.linkedin.com/company/rubeus/")
-      .click({ force:true });
+      .and("have.attr", "target", "_blank")
   });
 
 });

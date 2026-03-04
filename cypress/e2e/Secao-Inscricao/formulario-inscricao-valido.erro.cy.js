@@ -13,22 +13,23 @@ describe("Preenchimento do formulário de inscrição", () => {
 
   it("Deve preencher o formulário com dados válidos e exibir mensagem de erro", () => {
     //Valida se os campos nome, telefone, e-mail estão visíveis,habilitados e os preenche com dados válidos
-    cy.get('input[name="pessoa.nome"]')
+    cy.get('input[name="pessoa.nome"]', { timeout:5000 })//Espera até 5 segundos para o campo ser habilitado
     .should("be.visible")
-    .type("Carol");
+    .type("Carol")
 
-    cy.wait(1000) 
     cy.get('input[name="pessoa.telefonePrincipal"]')
       .should("be.enabled")
-      .type("61944237856");
+      .type("61944237856")
 
     cy.get('input[name="pessoa.emailPrincipal"]')
       .should("be.enabled")
-      .type("carol112@gmail.com");
-      
+      .type("carol112@gmail.com")
+
     //Clica no botão 'AVANÇAR'
-    cy.get("#rbBtnNext").click();
+    cy.get("#rbBtnNext").should("be.visible").and("be.enabled").click();
+
     //Verifica se a menssagem de erro é exibida na tela
-    cy.contains("É necessário informar a base legal").should("be.visible");
+    cy.contains("É necessário informar a base legal").should("be.visible")
+  
   });
 });

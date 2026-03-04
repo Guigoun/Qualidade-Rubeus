@@ -4,24 +4,27 @@ describe('Botões "Saiba mais" ', () => {
         cy.visit('https://qualidade.apprbs.com.br/certificacao')
     })
     
-    it('Deve validar se o primeiro botão está visível e não clicável', () => {
-        //Valida se o botão está visível e clicável no primeiro card
+    it("(Deve Falhar) Deve validar que o primeiro botão não está redirecionável", () => {
+        //Valida os atributos do botão "Saiba mais" do primeiro card
         cy.get('#inawao')
-        .should('be.visible')
-        .click()
+        .find('a')
+        .should("exist")
+        .and("have.attr", "href")
     })
 
-    it('Deve validar se o segundo botão está visível e não clicável', () => {
-        //Valida se o botão está visível e clicável no segundo card
+    it("(Deve Falhar) Deve validar que o segundo botão não está redirecionável", () => {
+        //Valida os atributos do botão "Saiba mais" do segundo card
         cy.get('#inzf4v')
-        .should('be.visible')
-        .click()
+        .find('a')
+        .should("exist")
+        .and("have.attr", "href")
     })
 
-    it('Deve validar se o terceiro botão está visível e não clicável', () => {
-        //Valida se o botão está visível e clicável no terceiro card
+    it("(Deve Falhar) Deve validar que o terceiro botão não está redirecionável", () => {
+        //Valida os atributos do botão "Saiba mais" do terceiro card
         cy.get('#i90t3o')
-        .should('be.visible')
-        .click()
+        .find('a')
+        .should("exist")
+        .and("have.attr", "href")
     })
 })

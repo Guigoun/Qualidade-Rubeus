@@ -3,7 +3,7 @@ describe("Preenchimento do formulário de inscrição", () => {
     cy.visit("https://qualidade.apprbs.com.br/certificacao");
   });
 
-  it("Deve preencher os campos de nome, telefone e e-mail com dados válidos", () => {
+  it("Deve preencher os campos de nome, telefone e e-mail com dados inválidos e exibir mensagem de preenchimento do campo", () => {
     // Ignora o erro específico da aplicação
     cy.on("uncaught:exception", (err) => {
       if (err.message.includes("ActionsForm")) {
@@ -27,7 +27,6 @@ describe("Preenchimento do formulário de inscrição", () => {
     //Verifica se exibe a mensagem de erro de preenchimento dos campos telefone e e-mail é exibida na tela
     cy.contains("Preencha este campo").should("be.visible");
     //Valida se o botão continua desabilitado após o preenchimento dos campos com dados inválidos
-    cy.get("#rbBtnNext")
-    .should("be.disabled")
+    cy.get("#rbBtnNext").should("be.disabled")
   });
 });

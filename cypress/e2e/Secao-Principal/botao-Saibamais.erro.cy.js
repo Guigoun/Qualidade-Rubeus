@@ -4,8 +4,11 @@ describe("Botão Saiba mais", () => {
     cy.visit("https://qualidade.apprbs.com.br/certificacao");
   });
 
-  it('Deve validar que o botão "Saiba mais" está visível porém não clicável', () => {
-    //Valida se o botão 'Saiba mais' está visível e clicável"
-    cy.get("#i7r4lj").should('be.visible').click();
+  it("(Deve Falhar)Valida que o botão 'Saiba mais' não possui link para redirecionamento", () => {
+    //Valida os atributos do botão "Saiba mais"
+    cy.get("#i7r4lj")
+    .find('a')
+    .should("exist")
+    .and("have.attr", "href")
   });
 });

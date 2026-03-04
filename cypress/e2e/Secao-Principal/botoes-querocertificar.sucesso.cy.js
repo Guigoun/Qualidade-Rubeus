@@ -13,24 +13,19 @@ describe("Botões 'Quero me certificar'", () => {
   });
 
   it("Deve validar o redirecionamento para página da rubeus", () => {
-    //Valida se o botão é visível, clica e permite ficar na mesma aba
+    //Valida os atributos do link e se está visível
     cy.get("#ivw5ng")
-      .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://rubeus.com.br/")
-      .click({ force: false });
+      .and("have.attr", "target", "_blank")
   });
 
   it("Deve validar o redirecionamento para página da rubeus", () => {
-
-    //Acessa o site novamente - Evita que fique preso na tela branca do domínio externo
-    //A automação está sofrendo conflito de domínio
-    cy.visit("https://qualidade.apprbs.com.br/certificacao");
-
+      //Valida os atributos do link e se está visível
       cy.get("#i72bga")
-      .invoke("removeAttr", "target")
       .should("be.visible")
       .and("have.attr", "href", "https://rubeus.com.br/")
-      .click({ force: false });
+      .and("have.attr", "target", "_blank")
+    
   });
 });
